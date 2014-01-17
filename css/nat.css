@@ -1,0 +1,55 @@
+﻿
+
+body
+{
+    background-color: rgb(44, 44, 44);
+    background-image: url("../images/nat_body_backgroundImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    border: none;    
+    font-size: 12px;
+    
+}
+
+header
+{
+    width: 1000px;
+    height: 130px;
+    background: none;
+    padding: 0px;
+    margin: 0px auto;
+    border: none;
+    position: relative;
+}
+
+    header .header__logo
+    {
+        width: 270px; 
+        height: 87px;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        position: absolute;
+        top: 17px;
+        left: 0px;
+    }
+
+    header .header__logo a 
+    {
+        display:block;
+        width: 270px; 
+        height: 0;
+        padding: 87px 0px 0px 0px;
+        margin: 0px;
+        border: none;         
+        overflow: hidden;
+        text-indent: -999em; 
+        background-image: url("../images/nat_header_logo.png");        
+        font-size: 1.2em;
+        color: #ffffff;
+        font-family: Helvetica, Arial;;
+    }
+
+
