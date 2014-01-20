@@ -1,0 +1,27 @@
+﻿.nat_banner__logo
+{
+    width: 270px; 
+    height: 87px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    top: 17px;
+    left: 0px;
+}
+
+    .nat_banner__logo a 
+    {
+        display:block;
+        width: 270px; 
+        height: 0;
+        padding: 87px 0px 0px 0px;
+        margin: 0px;
+        border: none;         
+        overflow: hidden;
+        text-indent: -999em; 
+        background-image: url("../images/nat_banner_logo.png");        
+        font-size: 1.2em;
+        color: rgb(255, 255, 255);
+        font-family: Helvetica, Arial;
+    }

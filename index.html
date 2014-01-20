@@ -4,36 +4,74 @@
 <head>
     <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <!-- TODO Add open graph tags and icons stuff -->  
     <title>Crispin &amp; Mulberry</title>
-    <link type="text/css" rel="stylesheet" href="css/nat.css" />  
-        
+    <link rel="stylesheet" href="css/nat.css" />        
+    <!--[if IE]>
+        <link type="text/css" rel="stylesheet" href="css/nat-ie.css" />  
+    <![endif]--> 
+    <!--[if lte IE 9]>
+        <link type="text/css" rel="stylesheet" href="css/nat-lte-ie9.css" /> 
+    <![endif]-->   
     <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" href="css/nat-lt-ie9.css" />  
+        
         <script type="text/javascript">
             //This will add any missing semantic tags to the DOM, so older versions of IE can render them.
-            var missingTags = ["header"];
+            var missingTags = ["header", "section", "nav", "footer"];
 
             for(var tagIndex = 0; tagIndex < missingTags.length; tagIndex++)
             {
                 document.createElement(missingTags[tagIndex]);
             }
-        </script>
-
-	    <link type="text/css" rel="stylesheet" href="css/nat-lt-ie9.css" />      
+        </script>       
     <![endif]--> 
 </head>
-<body>    
-    <!--[if lt IE 9]>	    
-        <img class="background__image" src="images/nat_body_backgroundImage.jpg" />  
-    <![endif]-->
-
-    <header>
-        <h1 class="header__logo">
+<body>
+    <header class="nat_banner" role="banner">
+        <h1 class="nat_banner__logo">
             <a href="#home" title="Crispin &amp; Mulberry">Crispin &amp; Mulberry</a>
         </h1>
+        <div class="nat_banner__search" role="search">
+            <form>
+                <input autocomplete="on" type="text" placeholder="Search" />
+                <input type="submit" value="" />
+            </form>
+        </div>
+        <div class="nat_banner__account" role="navigation">
+            <ul>
+                <li><a href="#myAccount">My Account</a></li>
+                <li><a href="#mySubscription">My Subscription</a></li>
+                <li><a href="#mySubscription">My Articles</a></li>
+            </ul>
+        </div>        
     </header>
+    <nav class="nat_navigation">
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#getaways">Getaways</a></li>
+            <li><a href="#travelTips">Travel Tips</a></li>
+            <li class="nat_navigation__selected"><a href="#newsAndFeatures">News &amp; Features</a></li>
+            <li><a href="#mySubscription">Contests</a></li>
+            <li><a href="#mySubscription">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="nat_main" role="main">
+        <div class="nat_main__imageCarousel" role="presentation">
 
+        </div>
+        <div class="nat_main__ads" role="presentation">
+
+        </div>
+    </div>
+    <footer>
+
+    </footer>
     <script type="text/javascript" src="js/libraries/jquery-min.js"></script>
+    <!--[if lt IE 9]>	    
+        <script type="text/javascript" src="js/nat-lt-ie9.js"></script>
+    <![endif]-->
     <script type="text/javascript" src="js/nat.js"></script>
 </body>
 </html>

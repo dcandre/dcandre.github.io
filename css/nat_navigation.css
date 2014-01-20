@@ -1,0 +1,119 @@
+﻿.nat_navigation
+{
+    display: table;
+    width: 1000px;
+    height: 44px;
+    background: none;
+    padding: 0px;
+    margin: 0px auto;
+    border: none;
+    position: relative;
+    font-size: 12px;
+}
+
+    .nat_navigation ul
+    {      
+        display: table-row;      
+        width: 1000px;
+        height: 44px;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        overflow: hidden;       
+    }
+
+        .nat_navigation li
+        {
+            display: table-cell;
+            width: auto;
+            height: 44px;
+            text-align: center; 
+            padding: 0px;
+            border: none;
+            margin: 0px;   
+            vertical-align: bottom;                                                 
+        }
+
+            .nat_navigation a
+            {  
+                display: block;   
+                height: 26px; 
+                margin: 4px 0px 0px 0px;
+                padding: 13px 0px 0px 0px;
+                border-right: none;
+                border-left: none;
+                border-top: 1px solid rgb(189, 189, 189);
+                border-bottom: 1px solid rgb(189, 189, 189);                 
+                font: bold 1em Helvetica, Arial;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                text-shadow: 0px 1px rgb(244, 245, 245);
+            }
+
+                .nat_navigation a:link
+                {
+                    background: linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    background: -webkit-linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    color: rgb(96, 97, 99);
+                }
+
+                .nat_navigation a:visited
+                {
+                    background: linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    background: -webkit-linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    color: rgb(96, 97, 99);
+                }
+
+                .nat_navigation a:hover
+                {
+                    background: linear-gradient(rgb(225, 227, 230), rgb(186, 188, 191));
+                    background: -webkit-linear-gradient(rgb(225, 227, 230), rgb(186, 188, 191));
+                    color: rgb(87, 90, 92);
+                }
+
+                .nat_navigation a:active
+                {
+                    background: linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    background: -webkit-linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    color: rgb(96, 97, 99);
+                }
+
+            .nat_navigation__selected a
+            {
+                display: block;   
+                height: 27px;
+                margin: 0px;  
+                padding: 16px 0px 0px 0px;                             
+                border-right: 1px solid rgb(194, 194, 194);
+                border-left: 1px solid rgb(194, 194, 194);
+                border-top: 1px solid rgb(189, 189, 189);
+                border-bottom: none;
+                text-shadow: none;
+                cursor: default;
+            }
+
+                .nat_navigation__selected a:link
+                {
+                    background: rgb(255, 255, 255);
+                    color: rgb(40, 43, 46);
+                }
+
+                .nat_navigation__selected a:visited
+                {
+                    background: rgb(255, 255, 255);
+                    color: rgb(40, 43, 46);
+                }
+
+                .nat_navigation__selected a:hover
+                {
+                    background: rgb(255, 255, 255);
+                    color: rgb(40, 43, 46);
+                }
+
+                .nat_navigation__selected a:active
+                {
+                    background: rgb(255, 255, 255);
+                    color: rgb(40, 43, 46);
+                }

@@ -1,0 +1,14 @@
+﻿@import url("nat_main__imageCarousel.css");
+@import url("nat_main__ads.css");
+
+.nat_main
+{
+    width: 1000px;
+    height: 1320px;
+    padding: 0px;
+    margin: 0px auto;
+    border: none;
+    background: rgb(255, 255, 255);
+    position: relative;
+    font-size: 12px;
+}

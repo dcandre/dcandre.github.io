@@ -1,0 +1,15 @@
+﻿@import url("nat_banner__logo.css");
+@import url("nat_banner__search.css");
+@import url("nat_banner__account.css");
+
+.nat_banner
+{
+    width: 1000px;
+    height: 126px;
+    background: none;
+    padding: 0px;
+    margin: 0px auto;
+    border: none;
+    position: relative;
+    font-size: 12px;
+}

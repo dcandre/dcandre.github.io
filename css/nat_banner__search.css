@@ -1,0 +1,53 @@
+﻿.nat_banner__search
+{
+    width: 260px;
+    height: 26px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    position: absolute;
+    left: 740px;
+    top: 31px;
+    background: transparent url("../images/nat_banner_searchBackground.png") no-repeat;
+}
+
+    .nat_banner__search form
+    {
+        width: 260px;
+        height: 26px;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        position: relative;
+    }
+        
+        .nat_banner__search input[type="text"]
+        {
+            width: 230px;
+            height: 26px;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 0; 
+            background: transparent; 
+            color: rgb(156, 159, 163);
+                              
+        }
+
+        .nat_banner__search input[type="submit"]
+        {
+            width: 30px;
+            height: 26px;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            position: absolute;
+            left: 230px;
+            top: 0px;
+            z-index: 10;
+            background: transparent url("../images/nat_banner_searchButton.png") no-repeat;
+            cursor: pointer;
+        }

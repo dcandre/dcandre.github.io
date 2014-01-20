@@ -1,12 +1,14 @@
-﻿body 
+﻿header, section, nav, footer
 {
-    background-image: none;
+    display:block;
 }
 
-.background__image 
+.nat_navigation a
 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
+    filter: progid:DXImageTransform.Microsoft.DropShadow(color="white", offX=0, offY=1);
+}
+
+.nat_navigation__selected a
+{
+    filter: progid:DXImageTransform.Microsoft.DropShadow(enabled=false);
 }

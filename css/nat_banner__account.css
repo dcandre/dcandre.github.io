@@ -1,0 +1,34 @@
+﻿.nat_banner__account
+{
+    color: rgb(255, 255, 255);
+}
+
+    .nat_banner__account ul
+    {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+    }
+
+    .nat_banner__account ul
+    {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+    }
+
+        .nat_banner__account li
+        {
+            display: inline;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            border-right: 1px solid rgb(255, 255, 255);
+        }
+
+        .nat_banner__account li:last-child
+        {
+            border-right: none;
+        }
