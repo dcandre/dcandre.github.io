@@ -2,7 +2,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- TODO Add open graph tags and icons stuff -->  
@@ -17,15 +17,7 @@
     <!--[if lt IE 9]>
         <link type="text/css" rel="stylesheet" href="css/nat-lt-ie9.css" />  
         
-        <script type="text/javascript">
-            //This will add any missing semantic tags to the DOM, so older versions of IE can render them.
-            var missingTags = ["header", "section", "nav", "footer", "figure", "figcaption", "article", "aside"];
-
-            for(var tagIndex = 0; tagIndex < missingTags.length; tagIndex++)
-            {
-                document.createElement(missingTags[tagIndex]);
-            }
-        </script>       
+        <script type="text/javascript" src="js/semanticTagHelper.js"></script>       
     <![endif]--> 
 </head>
 <body>
@@ -57,30 +49,30 @@
         <section class="nat_main__imageCarousel" aria-label="Image Carousel">
             <figure class="nat_main__imageCarousel___mainImage">
                 <img src="images/nat_main__imageCarousel___mainImage1.jpg" alt="Downtown Baltimore" title="Downtown Baltimore"  />
-                <figcaption><div class="nat_main__imageCarousel___captionBackground"></div><span>Downtown Baltimore</span><br />Check out the USS Torsk at Baltimore's historic Maritime Museum.</figcaption>
+                <figcaption><span>Downtown Baltimore</span><br />Check out the USS Torsk at Baltimore's historic Maritime Museum.</figcaption>
             </figure>
             <ul class="nat_main__imageCarousel___navigation" role="navigation">
                 <li>
-                    <figure class="nat_main__imageCarousel___thumbnailSelected">
-                        <img src="images/nat_main__imageCarousel___thumbnail1.jpg" alt="Downtown Baltimore" title="Downtown Baltimore" />
+                    <figure>
+                        <img src="images/nat_main__imageCarousel___thumbnail1.jpg" alt="Downtown Baltimore" title="Downtown Baltimore" data-description="Check out the USS Torsk at Baltimore's historic Maritime Museum." data-mainImageURL="images/nat_main__imageCarousel___mainImage1.jpg" />
                         <figcaption></figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="images/nat_main__imageCarousel___thumbnail2.jpg" alt="Exploring the Venetian" title="Exploring the Venetian" />
+                        <img src="images/nat_main__imageCarousel___thumbnail2.jpg" alt="Exploring the Venetian" title="Exploring the Venetian" data-description="Enjoy the best gondola ride on this side of the Atlantic Ocean." data-mainImageURL="images/nat_main__imageCarousel___mainImage2.jpg" />
                         <figcaption></figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="images/nat_main__imageCarousel___thumbnail3.jpg" alt="London After Dark" title="London After Dark" />
+                        <img src="images/nat_main__imageCarousel___thumbnail3.jpg" alt="London After Dark" title="London After Dark" data-description="Enjoy the pubs along the river Thames & get spectacular view from the London Eye." data-mainImageURL="images/nat_main__imageCarousel___mainImage3.jpg" />
                         <figcaption></figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="images/nat_main__imageCarousel___thumbnail4.jpg" alt="Mount Rushmore" title="Mount Rushmore" />
+                        <img src="images/nat_main__imageCarousel___thumbnail4.jpg" alt="Mount Rushmore" title="Mount Rushmore" data-description="Marvel at the majestic beauty of the Black Hills and come face to face with American history." data-mainImageURL="images/nat_main__imageCarousel___mainImage4.jpg" />
                         <figcaption></figcaption>
                     </figure>
                 </li>
