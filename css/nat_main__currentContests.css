@@ -1,0 +1,68 @@
+﻿.nat_main__currentContests
+{
+    width: 254px;
+    height: 161px;
+    padding: 10px 10px 0px 10px;
+    margin: 0px;
+    border: none;
+    background: rgb(219, 219, 219);
+    position: absolute;
+    left: 706px;
+    top: 728px;
+    font-size:12px;
+}
+
+    .nat_main__currentContests h1
+    {
+        width: 234px;
+        height: 21px;
+        padding: 0px 0px 0px 20px;
+        margin: 0px 0px 1px 0px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid rgb(150, 150, 150);
+        background: transparent url("../images/nat_main_sprite.png") no-repeat 0px -275px;
+        font: bold 1em Helvetica, Arial;
+        color: rgb(40, 43, 46);
+        text-transform: uppercase;
+    }
+
+    .nat_main__currentContests a
+    {
+        display: block;
+        text-decoration: none;
+    }
+
+    .nat_main__currentContests a>article
+    {
+        width: 254px;
+        height: 55px;
+        margin: 9px 0px 0px 0px;
+        padding: 0px;
+        border: none;
+    }
+
+        .nat_main__currentContests a>article>h1
+        {
+            width: auto;
+            height: auto;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            background: transparent;
+            font: bold 1em Helvetica, Arial;
+            color: rgb(40, 43, 46);
+            text-transform: none;
+            text-overflow: ellipsis;
+        }
+
+        .nat_main__currentContests a>article > img
+        {
+            width: 73px;
+            height: 55px;
+            margin: 0px 10px 0px 0px;
+            padding: 0px;
+            border: none;
+            float: left;
+        }

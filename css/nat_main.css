@@ -1,5 +1,11 @@
 ﻿@import url("nat_main__imageCarousel.css");
 @import url("nat_main__ads.css");
+@import url("nat_main__browseCategories.css");
+@import url("nat_main__recentArticles.css");
+@import url("nat_main__popularVideos.css");
+@import url("nat_main__newsletter.css");
+@import url("nat_main__currentContests.css");
+@import url("nat_main__tweets.css");
 
 .nat_main
 {

@@ -11,4 +11,143 @@
     position: absolute;
     left: 20px;
     top: 20px;
+    font-size: 14px;
 }
+
+    .nat_main__imageCarousel___mainImage
+    {
+        width: 666px;
+        height: 331px;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+        .nat_main__imageCarousel___mainImage img
+        {
+            width: 666px;
+            height: 331px;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index:0;
+            cursor: default;
+        }
+
+        .nat_main__imageCarousel___mainImage figcaption
+        {
+            width: 638px;
+            height: 56px;
+            padding: 12px 14px 0px 14px;
+            margin: 0px;
+            border: none;
+            position: absolute;
+            left: 0px;
+            top: 263px;
+            z-index: 100;
+            background-color: rgba(227, 228, 228, .8);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font: normal 1em Helvetica, Arial;
+            color: rgb(40, 43, 46);
+        }
+
+            .nat_main__imageCarousel___mainImage span
+            {
+                font: bold 24px Helvetica, Arial;
+                color: rgb(40, 43, 46);
+                text-transform: uppercase;
+            }
+
+    .nat_main__imageCarousel___navigation
+    {
+        width: 666px;
+        height: 89px;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        position: absolute;
+        left: 0px;
+        top: 331px;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+        .nat_main__imageCarousel___navigation li
+        {
+            width: 169px;
+            height: 89px;
+            float: left;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+        }
+
+            .nat_main__imageCarousel___navigation figure
+            {
+                width: 169px;
+                height: 89px;
+                padding: 0px;
+                margin: 0px;
+                border: none;
+                position: relative;
+            }
+
+                .nat_main__imageCarousel___navigation img
+                {
+                    width: 159px;
+                    height: 79px;
+                    margin: 0px;
+                    padding: 0px;
+                    border: none;
+                    position: absolute;
+                    left: 0px;
+                    top: 10px;
+                    z-index: 100;            
+                    cursor: pointer;
+                }
+
+                .nat_main__imageCarousel___navigation figcaption
+                {
+                    width: 159px;
+                    height: 79px;
+                    margin: 0px;
+                    padding: 0px;
+                    border: none;
+                    position: absolute;
+                    left: 0px;
+                    top: 10px;
+                    z-index: 0;
+                } 
+
+            .nat_main__imageCarousel___thumbnailSelected 
+            {
+                background: transparent url("../images/nat_main_sprite.png") no-repeat 75px 1px;
+            }
+
+                .nat_main__imageCarousel___thumbnailSelected figcaption
+                {
+                    width: 153px;
+                    height: 73px;
+                    margin: 0px;
+                    padding: 0px;
+                    border: 3px solid rgb(0, 132, 217);
+                    position: absolute;
+                    left: 0px;
+                    top: 10px;
+                    z-index: 200;
+                }
+
+        .nat_main__imageCarousel___navigation li:last-child
+        {
+            width: 159px;
+        }
+        
+
+            

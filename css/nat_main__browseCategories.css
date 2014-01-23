@@ -1,0 +1,84 @@
+﻿.nat_main__browseCategories
+{
+    width: 176px;
+    height: 429px;
+    padding: 0px 0px 0px 33px;
+    margin: 0px;
+    border: none;
+    position: absolute;
+    left: -13px;
+    top: 480px;
+    background: transparent url("../images/nat_main__browseCategories.png") no-repeat top left;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+    .nat_main__browseCategories h1
+    {
+        width: 176px;
+        height: 24px;
+        font: bold 1em Helvetica, Arial;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 132, 217);
+        padding: 10px 0px 0px 0px;
+        margin: 0px;
+        border: none;        
+    }
+
+    .nat_main__browseCategories h2
+    {
+        font: bold 1.2em Helvetica, Arial;
+        color: rgb(40, 43, 46);
+        margin: 15px 0px 0px 0px;        
+    }
+
+        .nat_main__browseCategories span
+        {
+            background: transparent url("../images/nat_main_sprite.png") no-repeat right -55px;
+            padding: 0px 15px 0px 0px;   
+        }
+
+    .nat_main__browseCategoriesClosed
+    {
+
+    }
+
+        .nat_main__browseCategoriesClosed span
+        {
+            background: transparent url("../images/nat_main_sprite.png") no-repeat right -72px;
+        }
+
+
+    .nat_main__browseCategories ul
+    {
+        list-style-type: none;
+        margin: 7px 0px 0px 0px;
+        padding: 0px;
+    }
+
+        .nat_main__browseCategories a
+        {
+            font: normal 1.2em Helvetica, Arial;
+            color: rgb(40, 43, 46);
+        }
+
+            .nat_main__browseCategories a:link
+            {
+                text-decoration: none;
+            }
+
+            .nat_main__browseCategories a:visited
+            {
+                text-decoration: none;
+            }
+
+            .nat_main__browseCategories a:hover
+            {
+                text-decoration: underline;
+            }
+
+            .nat_main__browseCategories a:active
+            {
+                text-decoration: underline;
+            }

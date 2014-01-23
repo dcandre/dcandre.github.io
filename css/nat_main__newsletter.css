@@ -1,0 +1,178 @@
+﻿.nat_main__newsletter
+{
+    width: 254px;
+    height: 217px;
+    padding: 10px 10px 0px 10px;
+    margin: 0px;
+    border: none;
+    background: rgb(219, 219, 219);
+    position: absolute;
+    left: 706px;
+    top: 480px;
+    font-size:12px;
+}
+
+    .nat_main__newsletter h1
+    {
+        width: 234px;
+        height: 21px;
+        padding: 0px 0px 0px 20px;
+        margin: 0px 0px 11px 0px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid rgb(150, 150, 150);
+        background: transparent url("../images/nat_main_sprite.png") no-repeat 0px -99px;
+        font: bold 1em Helvetica, Arial;
+        color: rgb(40, 43, 46);
+        text-transform: uppercase;
+    }
+
+    .nat_main__newsletter form
+    {
+        width: 254px;
+        height: 149px;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+    }
+
+        .nat_main__newsletter input[type="text"]
+        {
+            width: 238px;
+            height: 26px;
+            padding: 0px 8px 0px 8px;
+            margin: 0px;
+            border: none;
+            background: transparent url("../images/nat_main_sprite.png") no-repeat 0px -139px;
+            font: normal 1em Helvetica, Arial;
+            color: rgb(156, 159, 163);
+        }
+
+        .nat_main__newsletterFilters
+        {
+            width: 234px; 
+            height: 68px;
+            margin: 11px 0px 0px 0px;
+            padding: 10px 10px 0px 10px;
+            border: none;
+            background: transparent url("../images/nat_main_sprite.png") no-repeat 0px -179px;
+        }
+
+            .nat_main__newsletterFilters p
+            {
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                font: normal 1em Helvetica, Arial;
+                color: rgb(40, 43, 46);
+            }
+
+            .nat_main__newsletterFilters ul
+            {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                border: none;
+            }
+
+                .nat_main__newsletterFilters li
+                {
+                    padding: 0px;
+                    margin: 8px 0px 0px 0px;
+                    border: none;
+                    font: bold 1em Helvetica, Arial;
+                    color: rgb(40, 43, 46);
+                }
+
+                    .nat_main__newsletterFilters input[type="checkbox"]
+                    {
+                        padding: 0px;
+                        margin: 0px 10px 0px 0px;
+                        border: none;
+                        vertical-align: top;
+                    }
+
+    .nat_main__newsletter input[type="submit"]
+    {
+        width: 71px;
+        height: 25px;
+        margin: 9px 0px 0px 0px;
+        padding: 0px;
+        border: none;
+        background: rgb(0, 132, 217);
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font: bold 1em Helvetica, Arial;
+        float: right;
+        cursor: pointer;
+    }
+
+    .nat_main__newsletterLegal
+    {        
+        width: 274px;
+        height: 20px;
+        padding: 4px 0px 0px 0px;
+        margin: 0px;
+        border-top: 1px solid rgb(150, 150, 150);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        position: absolute;
+        left: 0px;
+        top: 202px;
+        background: rgb(202, 201, 201);
+        text-align: center;
+    }
+
+        .nat_main__newsletterLegal ul
+        {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+
+            .nat_main__newsletterLegal li
+            {
+                display: inline;
+                border: none;
+                margin: 0px;
+                padding: 0px 0px 0px 8px;
+            }
+
+            .nat_main__newsletterLegal li:first-child
+            {
+                border-right: 1px solid rgb(40, 43, 46);
+                padding: 0px 10px 0px 0;
+            }
+
+                .nat_main__newsletterLegal a
+                {
+                    color: rgb(40, 43, 46);
+                    font: normal 1em Helvetica, Arial;
+                }
+
+                    .nat_main__newsletterLegal a:link
+                    {
+                        text-decoration: none;
+                    }
+
+                    .nat_main__newsletterLegal a:hover
+                    {
+                        text-decoration: underline;
+                    }
+
+                    .nat_main__newsletterLegal a:visited
+                    {
+                        text-decoration: none;
+                    }
+
+                    .nat_main__newsletterLegal a:active
+                    {
+                        text-decoration: none;
+                    }
+
+
+
+    

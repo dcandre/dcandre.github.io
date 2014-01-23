@@ -20,7 +20,7 @@
         border: none;         
         overflow: hidden;
         text-indent: -999em; 
-        background-image: url("../images/nat_banner_logo.png");        
+        background: transparent url("../images/nat_banner_sprite.png") no-repeat 0px 0px;        
         font-size: 1.2em;
         color: rgb(255, 255, 255);
         font-family: Helvetica, Arial;

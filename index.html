@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
     <meta charset="utf-8" />
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- TODO Add open graph tags and icons stuff -->  
     <title>Crispin &amp; Mulberry</title>
     <link rel="stylesheet" href="css/nat.css" />        
@@ -19,7 +19,7 @@
         
         <script type="text/javascript">
             //This will add any missing semantic tags to the DOM, so older versions of IE can render them.
-            var missingTags = ["header", "section", "nav", "footer"];
+            var missingTags = ["header", "section", "nav", "footer", "figure", "figcaption", "article", "aside"];
 
             for(var tagIndex = 0; tagIndex < missingTags.length; tagIndex++)
             {
@@ -33,19 +33,15 @@
         <h1 class="nat_banner__logo">
             <a href="#home" title="Crispin &amp; Mulberry">Crispin &amp; Mulberry</a>
         </h1>
-        <div class="nat_banner__search" role="search">
-            <form>
-                <input autocomplete="on" type="text" placeholder="Search" />
-                <input type="submit" value="" />
-            </form>
-        </div>
-        <div class="nat_banner__account" role="navigation">
-            <ul>
-                <li><a href="#myAccount">My Account</a></li>
-                <li><a href="#mySubscription">My Subscription</a></li>
-                <li><a href="#mySubscription">My Articles</a></li>
-            </ul>
-        </div>        
+        <form class="nat_banner__search" role="search">
+            <input autocomplete="on" name="nat_banner__searchQuery" type="text" placeholder="Search" />
+            <input type="submit" name="nat_banner__searchSubmit"  value="" />
+        </form>
+        <ul class="nat_banner__account">
+            <li><a href="#myAccount">My Account</a></li>
+            <li><a href="#mySubscription">My Subscription</a></li>
+            <li><a href="#mySubscription">My Articles</a></li>
+        </ul>        
     </header>
     <nav class="nat_navigation">
         <ul>
@@ -58,15 +54,203 @@
         </ul>
     </nav>
     <div class="nat_main" role="main">
-        <div class="nat_main__imageCarousel" role="presentation">
-
-        </div>
-        <div class="nat_main__ads" role="presentation">
-
-        </div>
+        <section class="nat_main__imageCarousel" aria-label="Image Carousel">
+            <figure class="nat_main__imageCarousel___mainImage">
+                <img src="images/nat_main__imageCarousel___mainImage1.jpg" alt="Downtown Baltimore" title="Downtown Baltimore"  />
+                <figcaption><div class="nat_main__imageCarousel___captionBackground"></div><span>Downtown Baltimore</span><br />Check out the USS Torsk at Baltimore's historic Maritime Museum.</figcaption>
+            </figure>
+            <ul class="nat_main__imageCarousel___navigation" role="navigation">
+                <li>
+                    <figure class="nat_main__imageCarousel___thumbnailSelected">
+                        <img src="images/nat_main__imageCarousel___thumbnail1.jpg" alt="Downtown Baltimore" title="Downtown Baltimore" />
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/nat_main__imageCarousel___thumbnail2.jpg" alt="Exploring the Venetian" title="Exploring the Venetian" />
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/nat_main__imageCarousel___thumbnail3.jpg" alt="London After Dark" title="London After Dark" />
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/nat_main__imageCarousel___thumbnail4.jpg" alt="Mount Rushmore" title="Mount Rushmore" />
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <aside class="nat_main__ads" aria-label="Ads">
+            <div class="nat_main__ad">
+                <a href="#ad1"><img src="images/nat_ad1.jpg" alt="Holiday Inn" title="Holiday Inn" /></a>
+            </div>
+            <div class="nat_main__ad">
+                <a href="#ad2"><img src="images/nat_ad2.jpg" alt="Rise of the Guardians" title="Rise of the Guardians" /></a>
+            </div>            
+        </aside>
+        <section class="nat_main__browseCategories">
+            <h1>Browse Categories</h1>
+            <h2><span>Popular Destinations</span></h2>
+            <ul>
+                <li><a href="#UnitedStates">United States</a></li>
+                <li><a href="#Europe">Europe</a></li>
+                <li><a href="#LatinAmerica">Latin America</a></li>
+                <li><a href="#SouthPacific">South Pacific</a></li>
+                <li><a href="@Caribbean">Caribbean</a></li>
+                <li><a href="#Australia">Australia</a></li>
+                <li><a href="#AllDestinations">All Destinations</a></li>
+            </ul>
+            <h2 class="nat_main__browseCategoriesClosed"><span>Getaways</span></h2>
+            <ul>
+                <li><a href="#AdventureVacations">Adventure Vacations</a></li>
+                <li><a href="#BeachVacations">Beach Vacations</a></li>
+                <li><a href="#CruiseVacations">Cruise Vacations</a></li>
+                <li><a href="#CulinaryVacations">Culinary Vacations</a></li>
+                <li><a href="#FamilyVacations">Family Vacations</a></li>
+                <li><a href="#LuxuryVacations">Luxury Vacations</a></li>
+                <li><a href="#RomanticVacations">Romantic Vacations</a></li>
+                <li><a href="#SkiVacations">Ski Vacations</a></li>
+                <li><a href="#AllVacations">All Vacations</a></li>
+            </ul>
+        </section>
+        <section class="nat_main__recentArticles">
+            <h1>Recent Articles</h1>
+            <article class="nat_main__recentArticle">
+                <a href="#Article1">
+                    <img src="images/nat_main_recentArticle1.jpg" alt="Don't Miss the Parades at DisneyWorld" title="Don't Miss the Parades at DisneyWorld" />
+                    <h1>Don't Miss the Parades at DisneyWorld</h1>
+                    <p>The parades at Disney World are a one of a kind celebration full of all your favorite Disney characters and music. The entertainment never stops as parades are scheduled throughout the entire day.</p>                    
+                </a>
+            </article>
+            <article class="nat_main__recentArticle">
+                <a href="#Article2">
+                    <img src="images/nat_main_recentArticle2.jpg" alt="Get You Kicks in Downtown Las Vegas" title="Get You Kicks in Downtown Las Vegas" />
+                    <h1>Get Your Kicks in Downtown Las Vegas</h1>
+                    <p>Get off the strip and check out what Old Vegas has to offer. From shark infested water slides to the nightly Fremont Street Experience it's sure to please adventurers of all ages.</p>
+                    
+                </a>
+            </article>
+            <article class="nat_main__recentArticle">
+                <a href="#Article3">
+                    <img src="images/nat_main_recentArticle3.jpg" alt="Don't Miss Deep Dish in Chicago" title="Don't Miss Deep Dish in Chicago" />
+                    <h1>Don't Miss Deep Dish in Chicago</h1>
+                    <p>Deep dish pizza is as synonymous with Chicago as Thin Crust is to New York. Any way you slice it, any trip to the windy city is incomplete without an italian flavor explosion in your mouth.</p>                    
+                </a>
+            </article>
+        </section>
+        <section class="nat_main__popularVideos">
+            <h1>Popular Videos</h1>
+            <a href="#Video1">
+                <figure>
+                    <div class="nat_main__popularVideoIcon"></div>
+                    <img src="images/nat_main__popularVideo1.jpg" alt="Team Mongoose" title="Team Mongoose" />
+                    <figcaption>Team Mongoose</figcaption>
+                </figure>
+            </a>
+            <a href="#Video2">
+                <figure>
+                    <div class="nat_main__popularVideoIcon"></div>
+                    <img src="images/nat_main__popularVideo2.jpg" alt="St Paul's Cathedral" title="St Pauls Cathedral" />
+                    <figcaption>St Paul's Cathedral</figcaption>
+                </figure>
+            </a>
+            <a href="#Video3">
+                <figure>
+                    <div class="nat_main__popularVideoIcon"></div>
+                    <img src="images/nat_main__popularVideo3.jpg" alt="Hollywood and Highland" title="Hollywood and Highland" />
+                    <figcaption>Hollywood and Highland</figcaption>
+                </figure>
+            </a>
+            <a href="#Video4">
+                <figure>
+                    <div class="nat_main__popularVideoIcon"></div>
+                    <img src="images/nat_main__popularVideo4.jpg" alt="Lake Wissota" title="Lake Wissota" />
+                    <figcaption>Lake Wissota</figcaption>
+                </figure>
+            </a>
+            <a href="#Video5">
+                <figure>
+                    <div class="nat_main__popularVideoIcon"></div>
+                    <img src="images/nat_main__popularVideo5.jpg" alt="The Bellagio Fountains" title="The Bellagio Fountains" />
+                    <figcaption>The Bellagio Fountains</figcaption>
+                </figure>
+            </a>
+            <a href="#Video6">
+                <figure>
+                    <div class="nat_main__popularVideoIcon"></div>
+                    <img src="images/nat_main__popularVideo6.jpg" alt="The Atlantic Coast" title="The Atlantic Coast" />
+                    <figcaption>The Atlantic Coast</figcaption>
+                </figure>
+            </a>
+        </section>
+        <aside class="nat_main__newsletter">
+            <h1>Sign Up For Our Newsletter</h1>
+            <form>
+                <input autocomplete="on" name="nat_main__newsletterQuery" type="text" placeholder="user@domain.com" />
+                <div class="nat_main__newsletterFilters">
+                    <p><em>Select the newsletters you'd like to receive</em></p>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="nat_main__newsletter___destinationsAndGetaways" value="Destinations &amp; Getaways" />Destinations &amp; Getaways
+                        </li>
+                        <li>
+                            <input type="checkbox" name="nat_main__newsletter___weeklyTravelTips" value="Weekly Travel Tips" />Weekly Travel Tips
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" name="nat_main__newsletterSubmit" value="Sign Up" />
+            </form>
+            <div class="nat_main__newsletterLegal">
+                <ul>
+                    <li><a href="#Privacy">Privacy Policy</a></li>
+                    <li><a href="#Terms">Terms of Use</a></li>
+                </ul>
+            </div>
+        </aside>
+        <aside class="nat_main__currentContests">
+            <h1>Current Contests</h1>
+            <a href="#CurrentContest1">
+                <article>
+                    <img src="images/nat_main__currentContest1.jpg" alt="" title="" />
+                    <h1>Win an all inclusive trip to visit the famous Yeti Shrine deep in the heart of Asia</h1>
+                </article>
+            </a>
+            <a href="#CurrentContest1">
+            <article>
+                <img src="images/nat_main__currentContest2.jpg" alt="" title="" />
+                <h1>Win a mystical trip to Bath that includes a guided tour of Stonehenge</h1>
+            </article>
+            </a>
+        </aside>
+        <aside class="nat_main__tweets">
+            <a class="twitter-timeline" href="https://twitter.com/CrispinMulberry" data-widget-id="426222336648286210">Tweets by @CrispinMulberry</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </aside>
     </div>
-    <footer>
-
+    <footer class="nat_footer">
+        <ul class="nat_footer__siteLinks">
+            <li><a href="#Privacy">Privacy Policy</a></li>
+            <li><a href="#Terms">Terms of Use</a></li>
+            <li><a href="#SiteMap">Site Map</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        <ul class="nat_footer__copyright">
+            <li>&copy; 2014 Crispin & Mulberry</li>
+            <li>1640 Riverside Drive, Hill Valley, California, 95420</li>
+        </ul>
+        <ul class="nat_footer__social">
+            <li><a href="#Facebook"><img src="images/nat_footer__facebook.png" alt="Facebook" title="Facebook" /></a></li>
+            <li><a href="#Flickr"><img src="images/nat_footer__flickr.png" alt="Flickr" title="Flickr" /></a></li>
+            <li><a href="#Twitter"><img src="images/nat_footer__twitter.png" alt="Twitter" title="Twitter" /></a></li>
+            <li><a href="#Vimeo"><img src="images/nat_footer__vimeo.png" alt="Vimeo" title="Vimeo" /></a></li>
+            <li><a href="#RSS"><img src="images/nat_footer__rss.png" alt="RSS" title="RSS" /></a></li>
+        </ul>
     </footer>
     <script type="text/javascript" src="js/libraries/jquery-min.js"></script>
     <!--[if lt IE 9]>	    

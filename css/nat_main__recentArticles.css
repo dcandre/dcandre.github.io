@@ -1,0 +1,82 @@
+﻿.nat_main__recentArticles
+{
+    width: 470px;
+    height: 429px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    position: absolute;
+    left: 216px;
+    top: 480px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+    .nat_main__recentArticles h1
+    {
+        width: 437px;
+        height: 24px;
+        padding: 10px 0px 0px 33px;
+        margin: 0px;
+        border: none;
+        color: rgb(255, 255, 255);
+        background: rgb(0, 132, 217) url("../images/nat_main_sprite.png") no-repeat 0px -18px;
+        font: bold 1em Helvetica, Arial;
+        text-transform: uppercase;
+    }
+
+    .nat_main__recentArticles article
+    {
+        width: 470px;
+        height: 105px;
+        overflow: hidden;
+        padding: 0px;
+        margin: 20px 0px 0px 0px;
+        border: none;
+        position: relative;
+    }
+
+        .nat_main__recentArticles article > a
+        {
+            padding: 0px;
+            margin: 0px;
+            border: none;   
+            color: rgb(40, 43, 46);
+            text-decoration: none;
+            position: relative;
+            display: block;
+        }
+
+        .nat_main__recentArticles article > a > img
+        {
+            width: 140px;
+            height: 105px;
+            padding: 0px;
+            margin: 0px 15px 0px 0px;
+            border: none;
+            float: left;
+        }
+
+        .nat_main__recentArticles article > a > h1
+        {   
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            font: bold 1.2em Helvetica, Arial;
+            text-transform: none;
+            background: transparent;
+            color: rgb(40, 43, 46);  
+            text-overflow: ellipsis;
+        }
+
+        .nat_main__recentArticles article > a > p
+        {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            font: normal 1.2em Helvetica, Arial;
+            text-transform: none;
+            background: transparent;
+            color: rgb(40, 43, 46);   
+            text-overflow: ellipsis;
+        }

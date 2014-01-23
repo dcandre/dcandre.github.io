@@ -1,0 +1,93 @@
+﻿.nat_main__popularVideos
+{
+    width: 690px;
+    height: 410px;
+    padding: 0px 0px 0px 33px;
+    margin: 0px;
+    border: none;
+    position: absolute;
+    left: -13px;
+    top: 910px;
+    background: transparent url("../images/nat_main__popularVideos.png") no-repeat top left;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+    .nat_main__popularVideos h1
+    {
+        width: 666px;
+        height: 24px;
+        font: bold 1em Helvetica, Arial;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 132, 217);
+        padding: 10px 0px 0px 0px;
+        margin: 0px ;
+        border: none;        
+    }
+
+    .nat_main__popularVideos a
+    {
+        display: inline-block;
+        width: 208px;
+        height: 156px;
+        margin: 20px 18px 0px 0px;
+        padding: 0px;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+    }
+
+        .nat_main__popularVideos figure
+        {
+            width: 208px;
+            height: 156px;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .nat_main__popularVideoIcon
+            {
+                width: 42px;
+                height: 42px;
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                position: absolute;
+                left: 83px;
+                top: 50px;
+                z-index: 200;
+                background: transparent url("../images/nat_main__popularVideoIcon.png") no-repeat left top;
+            }
+
+            .nat_main__popularVideos figure > img
+            {
+                width: 208px;
+                height: 156px;
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                position: relative;
+                z-index: 0;
+            }
+
+            .nat_main__popularVideos figure > figcaption
+            {
+                width: 180px;
+                height: 23px;
+                margin: 0px;
+                padding: 8px 14px 0px 14px;
+                border: none;
+                background: rgba(227, 228, 228, .8);
+                font: bold 1.1em Helvetica, Arial;
+                color: rgb(40, 43, 46);
+                position: absolute;
+                left: 0px;
+                top: 125px;
+                text-overflow: ellipsis;
+                z-index: 100;
+            }

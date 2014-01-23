@@ -1,34 +1,56 @@
 ﻿.nat_banner__account
 {
-    color: rgb(255, 255, 255);
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-size: 12px;
+    position: absolute;
+    left: 742px;
+    top: 72px;
 }
 
-    .nat_banner__account ul
+    .nat_banner__account li
     {
-        list-style-type: none;
+        display: inline;
         margin: 0px;
-        padding: 0px;
+        padding: 0px 8px 0px 8px;
         border: none;
+        border-left: 1px solid rgb(255, 255, 255);
+        font: normal 1em Helvetica, Arial
     }
 
-    .nat_banner__account ul
+    .nat_banner__account li:first-child
     {
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;
-        border: none;
+        border-left: none;
+        padding: 0px 8px 0px 0px;
     }
 
-        .nat_banner__account li
+        .nat_banner__account a
         {
-            display: inline;
-            margin: 0px;
+            color: rgb(255, 255, 255);
             padding: 0px;
+            margin: 0px;
             border: none;
-            border-right: 1px solid rgb(255, 255, 255);
         }
 
-        .nat_banner__account li:last-child
-        {
-            border-right: none;
-        }
+            .nat_banner__account a:link
+            {
+                text-decoration: none;
+            }
+
+            .nat_banner__account a:hover
+            {
+                text-decoration: underline;
+            }
+
+            .nat_banner__account a:visited
+            {
+                text-decoration: none;
+            }
+
+            .nat_banner__account a:active
+            {
+                text-decoration: none;
+            }
+
