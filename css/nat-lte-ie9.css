@@ -1,1 +1,61 @@
-﻿
+﻿.nat_banner__search INPUT[type='text'] 
+{
+    padding: 5px 0px 0px 10px;
+    height: 19px;
+}
+
+.nat_main__newsletter INPUT[type='text'] 
+{
+    height: 21px;
+    padding: 5px 8px 0px 8px;
+}
+
+.nat_navigation a
+{
+    filter: progid:DXImageTransform.Microsoft.DropShadow(color="white", offX=0, offY=1);
+}
+
+.nat_navigation a:link
+{
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#fefefe", endColorstr="#d0d0d0");
+}
+
+.nat_navigation a:visited
+{
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#fefefe", endColorstr="#d0d0d0");
+}
+
+.nat_navigation a:hover
+{
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#e1e3e6", endColorstr="#babcbf");
+}
+
+.nat_navigation a:active
+{
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#fefefe", endColorstr="#d0d0d0");
+}
+
+.nat_navigation__selected a:link
+{
+    filter: progid:DXImageTransform.Microsoft.DropShadow(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.Gradient(enabled=false);
+}
+
+.nat_navigation__selected a:visited
+{
+    filter: progid:DXImageTransform.Microsoft.DropShadow(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.Gradient(enabled=false);
+}
+
+.nat_navigation__selected a:hover
+{
+    filter: progid:DXImageTransform.Microsoft.DropShadow(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.Gradient(enabled=false);
+}
+
+.nat_navigation__selected a:active
+{
+    filter: progid:DXImageTransform.Microsoft.DropShadow(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.Gradient(enabled=false);
+}
+

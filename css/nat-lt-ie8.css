@@ -1,6 +1,5 @@
-﻿.nat_navigation
+﻿.nat_navigation_ltie8
 {
-    display: table;
     width: 1000px;
     height: 44px;
     background: none;
@@ -8,12 +7,11 @@
     margin: 0px auto;
     border: none;
     position: relative;
-    font-size: 12px;
+    font-size: 12px;    
 }
 
-    .nat_navigation ul
-    {      
-        display: table-row;      
+    .nat_navigation_ltie8 tr
+    {            
         width: 1000px;
         height: 44px;
         list-style-type: none;
@@ -23,10 +21,8 @@
         overflow: hidden;       
     }
 
-        .nat_navigation li
+        .nat_navigation_ltie8 td
         {
-            display: table-cell;
-            width: auto;
             height: 44px;
             text-align: center; 
             padding: 0px;
@@ -35,7 +31,7 @@
             vertical-align: bottom;                                                 
         }
 
-            .nat_navigation a
+            .nat_navigation_ltie8 a
             {  
                 display: block;   
                 height: 25px; 
@@ -52,35 +48,31 @@
                 text-shadow: 0px 1px rgb(244, 245, 245);
             }
 
-                .nat_navigation a:link
+                .nat_navigation_ltie8 a:link
                 {
-                    background: linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
-                    background: -webkit-linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    background: transparent url("../images/nat_navigation_ltie8_background.jpg") repeat-x top left;
                     color: rgb(96, 97, 99);
                 }
 
-                .nat_navigation a:visited
+                .nat_navigation_ltie8 a:visited
                 {
-                    background: linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
-                    background: -webkit-linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    background: transparent url("../images/nat_navigation_ltie8_background.jpg") repeat-x top left;
                     color: rgb(96, 97, 99);
                 }
 
-                .nat_navigation a:hover
+                .nat_navigation_ltie8 a:hover
                 {
-                    background: linear-gradient(rgb(225, 227, 230), rgb(186, 188, 191));
-                    background: -webkit-linear-gradient(rgb(225, 227, 230), rgb(186, 188, 191));
+                    background: transparent url("../images/nat_navigation_ltie8_backgroundHover.jpg") repeat-x top left;
                     color: rgb(87, 90, 92);
                 }
 
-                .nat_navigation a:active
+                .nat_navigation_ltie8 a:active
                 {
-                    background: linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
-                    background: -webkit-linear-gradient(rgb(254, 254, 254), rgb(208, 208, 208));
+                    background: transparent url("../images/nat_navigation_ltie8_background.jpg") repeat-x top left;
                     color: rgb(96, 97, 99);
                 }
 
-            .nat_navigation__selected a
+            .nat_navigation_ltie8__selected a
             {
                 display: block;   
                 height: 27px;
@@ -94,25 +86,25 @@
                 cursor: default;
             }
 
-                .nat_navigation__selected a:link
+                .nat_navigation_ltie8__selected a:link
                 {
                     background: rgb(255, 255, 255);
                     color: rgb(40, 43, 46);
                 }
 
-                .nat_navigation__selected a:visited
+                .nat_navigation_ltie8__selected a:visited
                 {
                     background: rgb(255, 255, 255);
                     color: rgb(40, 43, 46);
                 }
 
-                .nat_navigation__selected a:hover
+                .nat_navigation_ltie8__selected a:hover
                 {
                     background: rgb(255, 255, 255);
                     color: rgb(40, 43, 46);
                 }
 
-                .nat_navigation__selected a:active
+                .nat_navigation_ltie8__selected a:active
                 {
                     background: rgb(255, 255, 255);
                     color: rgb(40, 43, 46);

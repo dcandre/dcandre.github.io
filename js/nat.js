@@ -48,6 +48,11 @@ NAT.getElementsByClassName = function(node, className)
     }
 };
 
+NAT.isStringNullOrEmpty = function(stringObj)
+{
+    return (null != stringObj && stringObj.search(/\S/gi) > -1) ? false : true;
+};
+
 NAT.Main.ImageCarouselImage = function(imageCarouselImageElement)
 {
     var self = this;
@@ -300,17 +305,14 @@ NAT.Main.ImageCarousel = function(imageCarouselElement)
 
 
 
-(function()
-{
-    //Image Carousel 
-    var imageCarouselElement = null;
-    var imageCarouselElements = NAT.getElementsByClassName(document, "nat_main__imageCarousel");
+//Image Carousel 
+var imageCarouselElement = null;
+var imageCarouselElements = NAT.getElementsByClassName(document, "nat_main__imageCarousel");
 
-    if(null != imageCarouselElements && imageCarouselElements.length > 0)
-    {        
-        NAT.Page.Controllers.imageCarousel = new NAT.Main.ImageCarousel(imageCarouselElements[0]);
-        var imageCarousel = NAT.Page.Controllers.imageCarousel;
-        imageCarousel.selectImageByIndex(0);
-        imageCarousel.start();
-    }
-})();
+if(null != imageCarouselElements && imageCarouselElements.length > 0)
+{        
+    NAT.Page.Controllers.imageCarousel = new NAT.Main.ImageCarousel(imageCarouselElements[0]);
+    var imageCarousel = NAT.Page.Controllers.imageCarousel;
+    imageCarousel.selectImageByIndex(0);
+    imageCarousel.start();
+}

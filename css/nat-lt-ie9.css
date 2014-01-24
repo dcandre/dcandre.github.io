@@ -1,14 +1,6 @@
 ﻿header, section, nav, footer, figure, figcaption, article, aside
 {
-    display:block;
+    display: block;
 }
 
-.nat_navigation a
-{
-    filter: progid:DXImageTransform.Microsoft.DropShadow(color="white", offX=0, offY=1);
-}
 
-.nat_navigation__selected a
-{
-    filter: progid:DXImageTransform.Microsoft.DropShadow(enabled=false);
-}

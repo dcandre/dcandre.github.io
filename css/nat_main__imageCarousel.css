@@ -24,6 +24,7 @@
         position: absolute;
         left: 0px;
         top: 0px;
+        cursor: pointer;
     }
 
         .nat_main__imageCarousel___mainImage img
@@ -37,7 +38,6 @@
             left: 0px;
             top: 0px;
             z-index:0;
-            cursor: default;
         }
 
         .nat_main__imageCarousel___mainImage figcaption
