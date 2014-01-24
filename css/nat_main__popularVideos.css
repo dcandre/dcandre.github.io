@@ -48,6 +48,7 @@
             border: none;
             overflow: hidden;
             position: relative;
+            cursor: pointer;
         }
 
             .nat_main__popularVideoIcon

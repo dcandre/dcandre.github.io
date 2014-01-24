@@ -41,6 +41,7 @@
         margin: 9px 0px 0px 0px;
         padding: 0px;
         border: none;
+        cursor: pointer;
     }
 
         .nat_main__currentContests a>article>h1
