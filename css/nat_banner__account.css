@@ -1,6 +1,6 @@
 ﻿.nat_banner__account
 {
-    list-style-type: none;
+    width: 270px;
     margin: 0px;
     padding: 0px;
     border: none;
@@ -8,49 +8,58 @@
     position: absolute;
     left: 742px;
     top: 72px;
+    
 }
 
-    .nat_banner__account li
+    .nat_banner__account ul
     {
-        display: inline;
+        list-style-type: none;
         margin: 0px;
-        padding: 0px 8px 0px 8px;
+        padding: 0px;
         border: none;
-        border-left: 1px solid rgb(255, 255, 255);
-        font: normal 1em Helvetica, Arial
     }
 
-    .nat_banner__account li:first-child
-    {
-        border-left: none;
-        padding: 0px 8px 0px 0px;
-    }
-
-        .nat_banner__account a
+        .nat_banner__account li
         {
-            color: rgb(255, 255, 255);
-            padding: 0px;
+            display: inline;
             margin: 0px;
+            padding: 0px 10px 0px 10px;
             border: none;
+            border-left: 1px solid rgb(255, 255, 255);
+            font: normal 1em Helvetica, Arial
         }
 
-            .nat_banner__account a:link
+        .nat_banner__account li:first-child
+        {
+            border-left: none;
+            padding: 0px 10px 0px 0px;
+        }
+
+            .nat_banner__account a
             {
-                text-decoration: none;
+                color: rgb(255, 255, 255);
+                padding: 0px;
+                margin: 0px;
+                border: none;
             }
 
-            .nat_banner__account a:hover
-            {
-                text-decoration: underline;
-            }
+                .nat_banner__account a:link
+                {
+                    text-decoration: none;
+                }
 
-            .nat_banner__account a:visited
-            {
-                text-decoration: none;
-            }
+                .nat_banner__account a:hover
+                {
+                    text-decoration: underline;
+                }
 
-            .nat_banner__account a:active
-            {
-                text-decoration: none;
-            }
+                .nat_banner__account a:visited
+                {
+                    text-decoration: none;
+                }
+
+                .nat_banner__account a:active
+                {
+                    text-decoration: none;
+                }
 

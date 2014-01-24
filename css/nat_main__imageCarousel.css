@@ -81,17 +81,17 @@
 
         .nat_main__imageCarousel___navigation li
         {
-            width: 169px;
+            width: 159px;
             height: 89px;
             float: left;
             padding: 0px;
-            margin: 0px;
+            margin: 0px 0px 0px 10px;
             border: none;
         }
 
             .nat_main__imageCarousel___navigation figure
             {
-                width: 169px;
+                width: 159px;
                 height: 89px;
                 padding: 0px;
                 margin: 0px;
@@ -143,9 +143,9 @@
                     z-index: 200;
                 }
 
-        .nat_main__imageCarousel___navigation li:last-child
+        .nat_main__imageCarousel___navigation li:first-child
         {
-            width: 159px;
+            margin: 0px;
         }
         
 

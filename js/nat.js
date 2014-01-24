@@ -64,6 +64,7 @@ NAT.Main.ImageCarouselImage = function(imageCarouselImageElement)
     self.title = "";
     self.description = "";
     self.imageSourceURL = null;
+    self.linkURL = null;
     self.selectedCSSClassName = "nat_main__imageCarousel___thumbnailSelected";
     self.deselectedCSSClassName = "";
     self.onClickEvent = new NAT.Event("NAT.Main.ImageCarouselImage_onClickEvent", self.imageCarouselImageElement);
@@ -119,6 +120,7 @@ NAT.Main.ImageCarouselImage = function(imageCarouselImageElement)
             self.title = self.imageElement.getAttribute("title");
             self.description = self.imageElement.getAttribute("data-description");
             self.imageSourceURL = self.imageElement.getAttribute("data-mainImageURL");
+            self.linkURL = self.imageElement.getAttribute("data-linkURL");
         }
     }
 };
@@ -131,7 +133,7 @@ NAT.Main.ImageCarouselPresentationImage = function(imageCarouselPresentationImag
     self.imageElement = null;
     self.captionElement = null;
 
-    self.display = function(imageSourceURL, title, description)
+    self.display = function(imageSourceURL, title, description, linkURL)
     {
         if(null != self.imageElement && null != self.captionElement)
         {
@@ -142,6 +144,11 @@ NAT.Main.ImageCarouselPresentationImage = function(imageCarouselPresentationImag
                 self.imageElement.setAttribute("title", title);
 
                 self.captionElement.innerHTML = "<span>" + title + "</span><br />" + description;
+
+                self.imageElement.onclick = function()
+                {
+                    location.href = linkURL;
+                };
             }
         }
     };
@@ -197,7 +204,7 @@ NAT.Main.ImageCarousel = function(imageCarouselElement)
 
             if(null != self.presentationImage)
             {
-                self.presentationImage.display(nextImage.imageSourceURL, nextImage.title, nextImage.description);
+                self.presentationImage.display(nextImage.imageSourceURL, nextImage.title, nextImage.description, nextImage.linkURL);
             }
         }
     };

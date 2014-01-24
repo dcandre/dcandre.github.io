@@ -1,4 +1,23 @@
-﻿.nat_navigation_ltie8
+﻿.nat_main__recentArticles article > a > h1
+{   
+    display: inline;
+}
+
+.nat_main__recentArticles article > a > p
+{
+    margin: 6px 0px 0px 0px;
+}
+.nat_main__newsletterFilters ul
+{
+    margin: 8px 0px 0px 0px;
+}
+
+.nat_main__newsletterFilters li
+{
+    margin: 0px;
+}
+
+.nat_navigation_ltie8
 {
     width: 1000px;
     height: 44px;
