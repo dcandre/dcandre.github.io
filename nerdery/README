@@ -3,3 +3,5 @@ You can select a nav button by adding the "nat_navigation__selected" class to th
 Carousel image markup can be added to the the unordered list tag with class name "nat_main__imageCarousel___navigation".  The "nat_main__imageCarousel___thumbnailSelected" class should be added to figure tag that you would like to select onload.  Each image requires some data attributes, so that the carousel will function properly, such as title, data-description, data-mainImageURL, data-linkURL.  
 
 Ads are contained in divs to support all kinds of ad content.
+
+A live version can be viewed at http://dcandre.github.io.
