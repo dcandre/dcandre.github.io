@@ -22,7 +22,7 @@ $(function(){
             else if(_.isArray(url.match(/\/test\/\d+\/results\//i)))
             {
                 //This would be done on the server
-                var diffArray = _.difference(dcandre.Main.UserAnswer.get("answerIDs"), [1,3]);
+                var diffArray = _.without(dcandre.Main.UserAnswer.get("answerIDs"), 1, 3);
                 var numberOfCorrectAnswers = (diffArray.length == 0) ? 1 : 0;
                 
                 //This is a TestResult Model
