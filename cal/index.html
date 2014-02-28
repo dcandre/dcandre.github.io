@@ -2,12 +2,31 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=6" />-->
     <meta charset="utf-8" />
     <title>Derek's Test</title>
-    <link href="css/cupertino/jquery-ui.css" rel="stylesheet">
+    <link href="css/cupertino/jquery-ui.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" href="css/nat-lt-ie9.css" />  
+        
+        <script type="text/javascript" src="js/semanticTagHelper.js"></script>       
+    <![endif]-->
 </head>
 <body>
+    <div id="testArea" class="hide"></div>
 
+    <script type="text/template" id="MultipleChoiceTestViewTemplate">
+        <h1><%= test_title %></h1>
+        <p><%= test_description %></p>
+        <input type="submit" value="Start" />
+    </script>
+
+    <script type="text/template" id="MultipleChoiceQuestionViewTemplate">
+        <h1><%= question_text %></h1>
+        <%= answers %>
+        <input type="submit" value="Submit" />
+    </script>
 
     <script src="js/libraries/json2.js"></script>
     <script src="js/libraries/jquery.js"></script>
