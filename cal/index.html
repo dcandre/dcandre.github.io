@@ -26,6 +26,16 @@
         <h1><%= question_text %></h1>
         <%= answers %>
         <input type="submit" value="Submit" />
+        <div class="hide">
+            <div id="dialog-message" title="Please select an answer">
+                <p><span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>You must select at least one answer to continue.</p>            
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="MultipleChoiceTestResultsViewTemplate">
+        <h1>Test Results</h1>
+        <p>You answered <%= correct_answers %> out of <%= total_questions %> questions correctly.</p>
     </script>
 
     <script src="js/libraries/json2.js"></script>

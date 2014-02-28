@@ -5,6 +5,11 @@ $(function(){
     //For the purpose of this demo I will override Backbone.sync to simulate connecting to a web server
     Backbone.sync = function(method, model, options) 
     {
+        //This is an example of converting a backbone js model into a JSON object
+        //Backbone.sync does this for you, when it makes a REST call.
+        var jsonModel = model.toJSON();       
+        var jsonModelString = JSON.stringify(jsonModel);
+        
         var url = model.url();
         
         if(method == "read")
@@ -14,14 +19,14 @@ $(function(){
                 //This is a Question Model
                 model.parse({ id: 1, text: "This is question 1", testID: 1, index: 0, answers: [{ id: 1, text: "This is answer 1", testID: 1, questionID: 1 }, { id: 2, text: "This is answer 2", testID: 1, questionID: 1 }, { id: 3, text: "This is answer 3", testID: 1, questionID: 1 }, { id: 4, text: "This is answer 4", testID: 1, questionID: 1 }] });
             }
-            else if(_.isArray(url.match(/\/test\/\d+\/results\/\d+\//i)))
+            else if(_.isArray(url.match(/\/test\/\d+\/results\//i)))
             {
                 //This would be done on the server
-                var diffArray = _.difference(dcandre.Main.UserAnswer.get(answerIDs), [1,3]);
+                var diffArray = _.difference(dcandre.Main.UserAnswer.get("answerIDs"), [1,3]);
                 var numberOfCorrectAnswers = (diffArray.length == 0) ? 1 : 0;
                 
                 //This is a TestResult Model
-                model.parse({id: 1, testID: 1, userID: 1, numberOfCorrectAnswers: numberOfCorrectAnswers, numberofQuestions: 1});
+                model.parse({id: 1, testID: 1, userID: model.get("userID"), numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: 1});
             }
             else if(_.isArray(url.match(/\/test\/\d+\//i)))
             {              
@@ -318,7 +323,7 @@ $(function(){
 
                 checkedAnswers.each(function(index, element) 
                 {
-                    var answerID = $(element).attr("data-answer-id");
+                    var answerID = parseInt($(element).attr("data-answer-id"));
                     selectedAnswerIDs.push(answerID);
                 });
 
@@ -326,8 +331,35 @@ $(function(){
             }
             else
             {
-                //The user needs to select an answer
+                $( "#dialog-message" ).dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
             }
+        }
+    });
+
+     //Multiple Choice Test Results View
+    dcandre.Views.MultipleChoiceTestResultsView = Backbone.View.extend({
+        initialize: function()
+        {
+            this.$el = $(this.el);
+
+            this.model.on("sync", function()
+            {
+                this.render();
+            }, this);
+        },
+        render: function()
+        { 
+            var template = _.template( $("#MultipleChoiceTestResultsViewTemplate").html(), {correct_answers: this.model.get("numberOfCorrectAnswers"), total_questions: this.model.get("numberOfQuestions")});
+            this.$el.html(template);
+
+            this.$el.removeClass().addClass("hide multipleChoiceTestResults").addClass("show", 500, function(){$(this).removeClass("hide")});                        
         }
     });
 
@@ -339,6 +371,7 @@ $(function(){
     
     //Main Element ID
     dcandre.Main.DisplayAreaID = "testArea";
+
 
     //User, or the person who is taking the test
     dcandre.Main.User = new dcandre.Models.User({id: 1, name: "Derek Andre", isAuthenticated: true});
@@ -353,10 +386,11 @@ $(function(){
     dcandre.Main.Question = new dcandre.Models.MultipleChoiceQuestion();
     
     //Main Answer from User
-    dcandre.Main.UserAnswer = new dcandre.Models.MultipleChoiceUserAnswer();
+    dcandre.Main.UserAnswer = new dcandre.Models.MultipleChoiceUserAnswer({userID: dcandre.Main.User.get("id")});
     
     //Main Test Results
-    dcandre.Main.TestResults = new dcandre.Models.TestResult();
+    dcandre.Main.TestResults = new dcandre.Models.TestResult({userID: dcandre.Main.User.get("id")});
+
 
     //Main Test View
     dcandre.Main.TestView = new dcandre.Views.MultipleChoiceTestView({model: dcandre.Main.Test, el: document.getElementById(dcandre.Main.DisplayAreaID)});
@@ -364,7 +398,10 @@ $(function(){
     //Main Question View
     dcandre.Main.QuestionView = new dcandre.Views.MultipleChoiceQuestionView({model: dcandre.Main.Question, el: document.getElementById(dcandre.Main.DisplayAreaID)});
 
-    
+    //Main Test Results View
+    dcandre.Main.TestResultsView = new dcandre.Views.MultipleChoiceTestResultsView({model: dcandre.Main.TestResults, el: document.getElementById(dcandre.Main.DisplayAreaID)});
+
+
 
     //Event listeners
 
@@ -428,17 +465,18 @@ $(function(){
 
     dcandre.Main.Router.on("route:getTestResultsByTestID", function(testID)
     {
-        if(dcandre.Main.Test.get("id") >= 0)
+        
+        if(dcandre.Main.Test.get("id") <= 0)
+        {
+            this.navigate("test/"+testID+"/", {trigger: true});            
+        }
+        else
         {
             if(null != testID && testID > 0)
             { 
                 dcandre.Main.TestResults.set("testID", testID);
                 dcandre.Main.TestResults.fetch();
             }
-        }
-        else
-        {
-            this.navigate("test/"+testID+"/", {trigger: true});
         }
     });
 
