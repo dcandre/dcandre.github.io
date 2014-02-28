@@ -22,8 +22,9 @@ $(function(){
             else if(_.isArray(url.match(/\/test\/\d+\/results\//i)))
             {
                 //This would be done on the server
-                var diffArray = _.without(dcandre.Main.UserAnswer.get("answerIDs"), 1, 3);
-                var numberOfCorrectAnswers = (diffArray.length == 0) ? 1 : 0;
+                var answerIDs = dcandre.Main.UserAnswer.get("answerIDs");
+                var diffArray = _.intersection(answerIDs, [1,3]);
+                var numberOfCorrectAnswers = (diffArray.length == 2) ? 1 : 0;
                 
                 //This is a TestResult Model
                 model.parse({id: 1, testID: 1, userID: model.get("userID"), numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: 1});
