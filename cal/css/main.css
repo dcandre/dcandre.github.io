@@ -60,7 +60,7 @@
 .multipleChoiceQuestion
 {      
     width: 639px;
-    height: 200px;
+    height: 350px;
     padding: 0px 20px 0px 20px; 
     margin: 4% auto 0% auto;
     box-shadow: 0px 3px 5px 0px #cccccc;
@@ -71,4 +71,42 @@
     background: #f2f5f7; 
     border: 1px solid #aed0ea; 
     position: relative;
+}
+
+[class~=multipleChoiceQuestion] h1
+{
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+    border: none;
+    font: bold 24px arial, helvetica;
+    color: #3d80b3;
+}
+
+[class~=multipleChoiceQuestion] ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+[class~=multipleChoiceQuestion] li
+{
+    margin: 0px 0px 10px 0px;
+}
+
+[class~=multipleChoiceQuestion] h2
+{
+    display: inline;
+    padding: 0px 0px 0px 15px;
+    margin: 0px;
+    border: none;
+    color: #333333;
+    font: normal 12px arial, helvetica;
+}
+
+[class~=multipleChoiceQuestion] input[type=submit]
+{
+    position:absolute;
+    left: 560px;
+    top: 290px;
 }

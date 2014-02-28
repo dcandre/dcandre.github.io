@@ -17,10 +17,11 @@ $(function(){
             else if(_.isArray(url.match(/\/test\/\d+\/results\/\d+\//i)))
             {
                 //This would be done on the server
-                var numberOfCorrectAnswers = (dcandre.Main.UserAnswer.isCorrect) ? 1 : 0;
-
+                var diffArray = _.difference(dcandre.Main.UserAnswer.get(answerIDs), [1,3]);
+                var numberOfCorrectAnswers = (diffArray.length == 0) ? 1 : 0;
+                
                 //This is a TestResult Model
-                model.parse({id: 1, testID: 1, userID: 1, numberOfCorrectAnswers: 0, numberofQuestions: 1});
+                model.parse({id: 1, testID: 1, userID: 1, numberOfCorrectAnswers: numberOfCorrectAnswers, numberofQuestions: 1});
             }
             else if(_.isArray(url.match(/\/test\/\d+\//i)))
             {              
@@ -31,13 +32,9 @@ $(function(){
         else if(method == "update")
         {        
             if(_.isArray(url.match(/\/user\/\d+\/answer\//i)))
-            {                
-                //This would be done on the server
-                var correctAnswerIDs = [1,3];
-                var isAnswerCorrect = (_.difference(correctAnswerIDs, model.get("answerIDs")).length == 0) ? true : false;
-
+            {
                 //This is a UserAnswer Model
-                model.parse({id: 1, userID: 1, answerIDs: correctAnswerIDs, isCorrect: isAnswerCorrect});
+                model.parse({id: 1, userID: model.get("userID"), answerIDs: model.get("answerIDs")});
             }
         } 
         
@@ -123,24 +120,13 @@ $(function(){
         defaults: {
             "id": 0,
             "userID": 0,
-            "answerIDs": new Array(),
-            "isCorrect": false
+            "answerIDs": new Array()
         },
         parse: function(response, options)
         {
             _.each(response, function(value, key, list)
             {
-                if(key == "answerIDs")
-                {
-                    _.each(value, function(element, index, list)
-                    {
-                        this.get("answerIDs").push(element);                        
-                    }, this);
-                }
-                else
-                {
-                    this.set(key, value);
-                }
+                this.set(key, value);
             }, this);
             
             return this;
@@ -280,7 +266,7 @@ $(function(){
         }, 
         onStartButtonClick: function(event)
         {
-            self.trigger("start:test:request", {model: this.model});           
+            this.trigger("test:start:button:click", {model: this.model});           
         }
     });
 
@@ -303,7 +289,7 @@ $(function(){
             {
                 var answerID = answer.get("id");
                 var answerElementID = "answer" + answerID; 
-                this.answers += "<li><input type='checkbox' id='"+answerElementID+"' data-answer-id='"+answerID+"'><label for='"+answerElementID+"'>" + (index + 1) + "</label>"+answer.get("text")+"</li>";
+                this.answers += "<li><input type='checkbox' id='"+answerElementID+"' data-answer-id='"+answerID+"'><label for='"+answerElementID+"'>" + (index + 1) + "</label><h2>"+answer.get("text")+"</h2></li>";
 
             }, variables);
 
@@ -336,7 +322,7 @@ $(function(){
                     selectedAnswerIDs.push(answerID);
                 });
 
-                self.trigger("answer:submitted:from:question", {model: this.model, selectedAnswerIDs: selectedAnswerIDs});
+                this.trigger("answer:submitted:from:question", {model: this.model, selectedAnswerIDs: selectedAnswerIDs});
             }
             else
             {
@@ -379,7 +365,34 @@ $(function(){
     dcandre.Main.QuestionView = new dcandre.Views.MultipleChoiceQuestionView({model: dcandre.Main.Question, el: document.getElementById(dcandre.Main.DisplayAreaID)});
 
     
-    //Listen for a test that 
+
+    //Event listeners
+
+    //Listen for a question to be answered
+    dcandre.Main.QuestionView.on("answer:submitted:from:question", function(attr)
+    {
+        dcandre.Main.UserAnswer.set("userID", dcandre.Main.User.get("id"));
+        dcandre.Main.UserAnswer.set("answerIDs", attr.selectedAnswerIDs);
+
+        dcandre.Main.UserAnswer.save();
+
+        var nextQuestionIndex = attr.model.get("index") + 1;
+        
+        if(nextQuestionIndex < dcandre.Main.Test.get("numberOfQuestions"))
+        {
+            dcandre.Main.Router.navigate("test/"+attr.model.get("testID")+"/question/index/"+nextQuestionIndex+"/", {trigger: true});
+        }
+        else
+        {
+            dcandre.Main.Router.navigate("test/"+attr.model.get("testID")+"/results/", {trigger: true});
+        }
+    });
+
+    //Listen for the test to start
+    dcandre.Main.TestView.on("test:start:button:click" ,function(attr)
+    {
+        dcandre.Main.Router.navigate("test/"+attr.model.get("id")+"/question/index/0/", {trigger: true});
+    });
 
     //Get Test By ID route
     dcandre.Main.Router.on("route:getTestByID", function(id)
